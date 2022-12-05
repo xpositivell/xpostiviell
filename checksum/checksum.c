@@ -1,10 +1,10 @@
 #include "checksum.h"
 
-int checksum(char *message) {
+int checksum(char *messgae) {
     int c = 0;
-    while (*message) {
-        c += c ^ (int) (*message);
-        message++;
-}
-return c;
+    while (*messgae) {
+        c += c ^ (int)(*messgae);
+        messgae++;
+    }
+    return c;
 }

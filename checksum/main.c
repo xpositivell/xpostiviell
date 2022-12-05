@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include "encrypt.h"
+#include "checksum.h"
 
 int main() {
-    char mes[20];
-    scanf("%s", mes);
-    encrypt (mes);
-    printf("%s\n", mes);
-    encrypt (mes);
-    printf("%s\n", mes);
+    char s[] = "Skaji drug i prohodi";
+    encrypt(s);
+    printf("Zashifrovano v: '%s'\n", s);
+    printf("Kontrolnaya cymma %i\n", checksum (s));
     return 0;
 }
